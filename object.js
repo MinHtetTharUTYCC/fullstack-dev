@@ -19,10 +19,6 @@ const users = [
         email: 'alice@example.com',
         program: 'International Program',
         major: 'DTI',
-
-        sleep() {
-            console.log('Sleeping...');
-        },
     },
     {
         name: 'john',
@@ -30,7 +26,6 @@ const users = [
         email: 'alice@example.com',
         program: 'Thai Program',
         major: 'DTI',
-        grade: 'A',
     },
     {
         name: 'john',

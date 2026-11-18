@@ -18,7 +18,7 @@ class Human {
     }
 
     privateInfo() {
-        console.log('Name: ', this.name, 'Age: ', this.age, 'Email: ', this.#email);
+        console.log('Email: ', this.#email);
     }
 
     sleep() {
@@ -50,8 +50,7 @@ class Student extends Human {
     }
 
     privateInfo() {
-        super.publicInfo();
-        console.log('Student ID: ', this.studentId);
+        super.privateInfo();
         console.log('GPA: ', this.#gpa);
     }
 
@@ -81,7 +80,6 @@ class Teacher extends Human {
 
     privateInfo() {
         super.privateInfo();
-        console.log('Teacher ID: ', this.teacherId);
         console.log('Salary: ', this.#salary);
     }
 

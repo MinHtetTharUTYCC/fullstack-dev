@@ -15,20 +15,11 @@ class Human {
     }
 
     publicInfo() {
-        console.log('Name: ', this.name, 'Age: ', this.age, this.#fbPwd);
+        console.log('Name: ', this.name, 'Age: ', this.age);
     }
 
     privateInfo() {
-        console.log(
-            'Name: ',
-            this.name,
-            'Age: ',
-            this.age,
-            'FB Password: ',
-            this.#fbPwd,
-            'Email: ',
-            this.#email,
-        );
+        console.log('Email: ', this.#email, 'FB Password: ', this.#fbPwd);
     }
 
     changeFbPwd(currentPwd, newPwd) {
