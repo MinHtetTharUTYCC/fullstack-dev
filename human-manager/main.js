@@ -129,7 +129,7 @@ async function main() {
         } else if (choice === '3') {
             await addTeacher();
         } else if (choice === '4') {
-            listHumans();
+            listHumans(); //notice that we don't need to use 'await' here because listHumans is not async function
         } else if (choice === '5') {
             await deleteHuman();
         } else if (choice === '0') {
@@ -140,7 +140,7 @@ async function main() {
         }
     }
 
-    rl.close();
+    rl.close(); // close the readline interface when done to prevent the program from hanging
 }
 
 main();

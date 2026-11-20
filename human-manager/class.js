@@ -17,6 +17,7 @@ class Human {
         this.heightCm = heightCm;
     }
 
+    // getters and setters for age
     get age() {
         return this.#age;
     }
