@@ -3,6 +3,8 @@ class Human {
     age; // age = undefined; // public property
     #email; // email = undefined; // private property
 
+    static species = 'Homo sapiens'; // static property
+
     constructor(name, age, email) {
         if (name === undefined || age === undefined || email === undefined) {
             throw new Error('Name, age, and email are required');
@@ -28,6 +30,15 @@ class Human {
     walk() {
         console.log(`${this.name} is walking...`);
     }
+
+    drive() {
+        // Abstract method
+        throw new Error('Drive method is not implemented');
+    }
+
+    static getMaxLifespan() {
+        return 100; // Default maximum lifespan for humans
+    }
 }
 
 class Student extends Human {
@@ -44,6 +55,7 @@ class Student extends Human {
         this.#gpa = gpa;
     }
 
+    // Override the publicInfo method
     publicInfo() {
         super.publicInfo();
         console.log('Student ID: ', this.studentId);
@@ -56,6 +68,10 @@ class Student extends Human {
 
     study() {
         console.log(`${this.name} is studying...`);
+    }
+
+    drive() {
+        console.log(`student is driving a bicycle`);
     }
 }
 
@@ -86,6 +102,10 @@ class Teacher extends Human {
     teach() {
         console.log(`${this.name} is teaching...`);
     }
+
+    drive() {
+        console.log(`teacher is driving a lamborghini`);
+    }
 }
 
 const human = new Human('Alice', 20, 'alice@example.com');
@@ -99,15 +119,21 @@ for (const person of persons) {
         person.publicInfo();
         person.sleep();
         person.walk();
+        // person.drive(); // This will throw an error since drive is not implemented
     }
 
     if (person instanceof Student) {
         person.study();
+        person.drive();
     }
 
     if (person instanceof Teacher) {
         person.teach();
+        person.drive();
     }
 
     console.log('\n');
 }
+
+console.log('Max Lifespan of Humans: ', Human.getMaxLifespan());
+console.log('Species of Humans: ', Human.species);
