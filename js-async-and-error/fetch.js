@@ -10,5 +10,8 @@ async function fetchUser(id) {
     }
 }
 
-await fetchUser('octocat');
-await fetchUser('no-such-user-xyz-123');
+await fetchUser('octocat'); // will succeed
+await fetchUser('no-such-user-xyz-123'); // will throw 404 error
+
+// this will run even if the fetchUser() call fails because the error is caught and handled inside fetchUser() with try-catch
+console.log('done');

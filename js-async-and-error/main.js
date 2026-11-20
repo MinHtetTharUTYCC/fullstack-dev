@@ -14,8 +14,6 @@ function getComments(postId, callback) {
     }, 2000);
 }
 
-// Step 2 needs step 1's result, step 3 needs step 2's -> nesting!
-
 getUser(1, (err, userData) => {
     // use user data
     getPosts(userData.id, (err, postsData) => {
@@ -26,3 +24,7 @@ getUser(1, (err, userData) => {
         });
     });
 });
+
+// This is not a good way to write code because it is hard to read and maintain.
+// This is called "callback hell" or "pyramid of doom".
+// We can use promises and async/await to make this code more readable and maintainable.
