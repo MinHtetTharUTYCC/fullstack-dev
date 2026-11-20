@@ -37,7 +37,7 @@ async function askCommonDetails() {
 
 // need async because we are using await inside this function
 async function addHuman() {
-    // Removing try-catch will cause the program to crash if an error occurs
+    // Removing try-catch will cause the program to crash if an error occurs (eg. user enters a non-number for age or height)
     try {
         const { name, age, heightCm } = await askCommonDetails(); // destructuring data {}
 
@@ -52,7 +52,7 @@ async function addHuman() {
 
 // need async because we are using await inside this function
 async function addStudent() {
-    // Removing try-catch will cause the program to crash if an error occurs
+    // Removing try-catch will cause the program to crash if an error occurs (eg. user enters a non-number for age, height, or grade)
     try {
         const { name, age, heightCm } = await askCommonDetails(); // destructuring data {}
         const grade = Number(await askQuestion('Enter grade: '));
@@ -68,7 +68,7 @@ async function addStudent() {
 
 // need async because we are using await inside this function
 async function addTeacher() {
-    // Removing try-catch will cause the program to crash if an error occurs
+    // Removing try-catch will cause the program to crash if an error occurs (eg. user enters a non-number for age, height, or salary)
     try {
         const { name, age, heightCm } = await askCommonDetails(); // destructuring data {}
         const salary = Number(await askQuestion('Enter salary: '));

@@ -21,6 +21,13 @@ class Human {
         return this.#age;
     }
 
+    set age(newAge) {
+        if (!Number.isInteger(newAge) || newAge < 0) {
+            throw new Error('Age must be a non-negative whole number');
+        }
+        this.#age = newAge;
+    }
+
     info() {
         console.log(this.name, this.#age, this.heightCm);
     }
@@ -39,8 +46,16 @@ class Student extends Human {
         this.#grade = grade;
     }
 
+    // getters and setters for grade
     get grade() {
         return this.#grade;
+    }
+
+    set grade(newGrade) {
+        if (!Number.isInteger(newGrade) || newGrade < 1) {
+            throw new Error('Grade must be a positive whole number');
+        }
+        this.#grade = newGrade;
     }
 
     study() {
@@ -61,8 +76,16 @@ class Teacher extends Human {
         this.#salary = salary;
     }
 
+    // getters and setters for salary
     get salary() {
         return this.#salary;
+    }
+
+    set salary(newSalary) {
+        if (!Number.isFinite(newSalary) || newSalary < 0) {
+            throw new Error('Salary must be a non-negative number');
+        }
+        this.#salary = newSalary;
     }
 
     teach() {
