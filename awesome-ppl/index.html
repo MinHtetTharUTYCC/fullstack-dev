@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome People</title>
+    <link ref="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <main>
+        <h1>Awesome People</h1>
+        <form id="add-form">
+            <input id="name" type="text" placeholder="Enter a name" required maxlength="50" />
+            <button type="submit">Add</button>
+        </form>
+        <ul id="user-list">
+        </ul>
+    </main>
+
+    <dialog id="edit-dialog">
+        <form id="edit-form">
+            <h2>Edit User</h2>
+            <input id="edit-name" type="text" required maxlength="50" />
+            <button type="button" id="cancel-edit">Cancel</button>
+            <button type="submit">Save</button>
+        </form>
+    </dialog>
+
+    <script type="module" src="./person.js"></script>
+
+</body>
+
+</html>
