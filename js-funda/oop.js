@@ -51,6 +51,10 @@ class Human {
             console.log('Login successful');
         }
     }
+
+    static getMaxLifeSpan() {
+        return 120;
+    }
 }
 
 const human1 = new Human('Alice', 20);
@@ -68,3 +72,5 @@ for (const human of humans) {
     console.log(human.publicInfo());
     console.log(human.fbLogin('1234'));
 }
+
+console.log('Max life span: ', Human.getMaxLifeSpan());
