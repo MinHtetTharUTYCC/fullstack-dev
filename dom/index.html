@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Demo</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.5;
+            margin: 2rem auto;
+            max-width: 40rem;
+            padding: 0 1rem;
+        }
+
+        button {
+            margin: 0.25rem;
+            padding: 0.5rem;
+        }
+
+        .highlight {
+            background: #fff2a8;
+            padding: 0.5rem;
+        }
+    </style>
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+    <h1>DOM Demo</h1>
+    <p>The browser turns this HTML document into the DOM, which JavaScript can read and change.</p>
+
+    <h2>textContent and innerHTML</h2>
+    <p id="text-demo">Click a button to change this paragraph.</p>
+    <button id="text-button">Set with textContent</button>
+    <button id="html-button">Set with innerHTML</button>
+
+    <h2>classList and addEventListener</h2>
+    <button id="class-button">Toggle highlight</button>
+
+    <h2>createElement</h2>
+    <button id="add-button">Add a list item</button>
+    <ul id="item-list"></ul>
+</body>
+
+</html>
