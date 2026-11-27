@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Find people - Awesome People</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="container">
+    <h1>Find people <span>on GitHub</span></h1>
+    <p><a href="index.html">Back to Awesome People</a></p>
+    <form id="search-form">
+      <input id="query" type="search" placeholder="Search GitHub users" maxlength="100" required>
+      <button id="search-button" type="submit">Search</button>
+    </form>
+    <p id="search-status" class="status" role="status" aria-live="polite"></p>
+    <ul id="search-results" class="search-results"></ul>
+  </main>
+  <script type="module" src="search.js"></script>
+</body>
+
+</html>

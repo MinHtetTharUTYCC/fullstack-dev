@@ -2,33 +2,32 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awesome People</title>
-    <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8">
+  <title>awesome-people</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <main>
-        <h1>Awesome People</h1>
-        <form id="add-form">
-            <input id="name" type="text" placeholder="Enter a name" required />
-            <button type="submit">Add</button>
-        </form>
-        <ul id="user-list"></ul>
-    </main>
-
-    <dialog id="edit-dialog">
-        <form id="edit-form">
-            <h2>Edit User</h2>
-            <input id="edit-name" type="text" required />
-            <button type="button" id="cancel-edit">Cancel</button>
-            <button type="submit">Save</button>
-        </form>
-    </dialog>
-
-    <script type="module" src="./person.js"></script>
-
+  <main class="container">
+    <h1>Awesome People <span>(Add your favorite people here)</span></h1>
+    <p><a href="search.html">Find people on GitHub</a></p>
+    <form id="add-form">
+      <input id="name" type="text" placeholder="Name" maxlength="50" required>
+      <button type="submit">Add</button>
+    </form>
+    <ul id="user-list"></ul>
+  </main>
+  <dialog id="edit-dialog">
+    <form id="edit-form" method="dialog">
+      <h2>Edit user</h2>
+      <input id="edit-name" type="text" maxlength="50" required>
+      <div class="actions">
+        <button type="button" id="cancel-edit">Cancel</button>
+        <button type="submit" value="save">Save</button>
+      </div>
+    </form>
+  </dialog>
+  <script type="module" src="script.js"></script>
 </body>
 
 </html>
